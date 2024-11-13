@@ -32,14 +32,14 @@ const signIn = async (req, res) => {
       username: req.body.username,
     });
     if (!usernameInDatabase) {
-      return res.send("Login failed, please try again");
+      return res.status(400).json({ msg: "Login failed, please try again" });
     }
     const validPassword = bcrypt.compareSync(
       req.body.password,
       usernameInDatabase.password
     );
     if (!validPassword) {
-      return res.send("Login failed, please try again");
+      return res.status(400).json("Login failed, please try again");
     }
     const claims = { username: usernameInDatabase.username };
     const access = jwt.sign(claims, process.env.ACCESS_SECRET, {

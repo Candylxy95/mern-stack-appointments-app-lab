@@ -30,6 +30,7 @@ const addAppt = async (req, res) => {
       address: req.body.address,
       attendee: req.body.attendee,
       date: req.body.date,
+      time: req.body.time,
       comments: req.body.comments,
       owner: user._id,
     });
@@ -46,7 +47,7 @@ const viewOneAppt = async (req, res) => {
       return res.status(400).json({ msg: "user not found" });
     }
     const appointment = await Appointment.findById(req.params.id);
-    res.status(200).json({ DetailedAppointment: appointment });
+    res.status(200).json(appointment);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
