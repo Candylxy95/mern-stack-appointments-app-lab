@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Oxygen", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: whitesmoke;
+}
+
+.centered {
+  margin: 3rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.authBody {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.authForm,
+.apptForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(219, 193, 198);
+  color: darkslategrey;
+  padding: 20px 0 20px 0;
+  border-radius: 30px;
+  width: 80%;
+}
+
+.authForm > h1,
+.apptForm > h1 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  color: rgb(102, 82, 93);
+}
+
+input,
+button {
+  height: 50px;
+  border-radius: 20px;
+  padding-left: 20px;
+  width: 30%;
+  margin-bottom: 10px;
+  border: none;
+  background-color: rgb(219, 193, 198);
+  border: solid 1px rgb(102, 82, 93, 0.2);
+}
+
+button {
+  padding-left: 0;
+  background-color: rgb(102, 82, 93);
+  color: rgb(255, 255, 255);
+}
+
+button:hover {
+  background-color: rgb(219, 154, 225);
+}
+
+.navBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+.navBar > li {
+  margin: 20px;
+}
+
+.apptList {
+  display: flex;
+  flex-direction: row;
+}
+
+.summaryCard {
+  background-color: pink;
+  width: 50%;
+  height: auto;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.oneAppt {
+  display: flex;
+  justify-content: center;
+}
+
+.oneAppt input {
+  width: auto;
+}
+
+.apptCard {
+  background-color: pink;
+  width: 50%;
+  height: auto;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.apptCard span {
+  font-weight: bolder;
+}
+
+.apptCard > div {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+}
+
+a {
+  color: rgb(128, 52, 109);
+  text-decoration: none;
+}
